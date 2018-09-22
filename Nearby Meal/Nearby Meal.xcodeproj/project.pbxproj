@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BC9B24C21C3476C6DF3F00A /* Pods_Nearby_Meal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E060315776BE339B223DC64 /* Pods_Nearby_Meal.framework */; };
+		71626E762156415100F502B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E752156415100F502B7 /* AppDelegate.swift */; };
+		71626E782156415100F502B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E772156415100F502B7 /* ViewController.swift */; };
+		71626E7B2156415100F502B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71626E792156415100F502B7 /* Main.storyboard */; };
+		71626E7D2156415200F502B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71626E7C2156415200F502B7 /* Assets.xcassets */; };
+		71626E802156415200F502B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71626E7E2156415200F502B7 /* LaunchScreen.storyboard */; };
+		71626E8B2156476500F502B7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E8A2156476500F502B7 /* APIService.swift */; };
+		71626E8E2156488A00F502B7 /* PlaceCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E8D2156488A00F502B7 /* PlaceCoordinates.swift */; };
+		71626E902156490600F502B7 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E8F2156490600F502B7 /* PlaceType.swift */; };
+		71626E9221564CED00F502B7 /* APIService+MealAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E9121564CED00F502B7 /* APIService+MealAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E060315776BE339B223DC64 /* Pods_Nearby_Meal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nearby_Meal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46CE476F2AD54FF4213A5A78 /* Pods-Nearby Meal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearby Meal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal.debug.xcconfig"; sourceTree = "<group>"; };
+		68B79B27F26C6DB0D697414E /* Pods-Nearby Meal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearby Meal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal.release.xcconfig"; sourceTree = "<group>"; };
+		71626E722156415100F502B7 /* Nearby Meal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nearby Meal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71626E752156415100F502B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71626E772156415100F502B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71626E7A2156415100F502B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71626E7C2156415200F502B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71626E7F2156415200F502B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71626E812156415200F502B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71626E8A2156476500F502B7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		71626E8D2156488A00F502B7 /* PlaceCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCoordinates.swift; sourceTree = "<group>"; };
+		71626E8F2156490600F502B7 /* PlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
+		71626E9121564CED00F502B7 /* APIService+MealAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+MealAPI.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71626E6F2156415100F502B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC9B24C21C3476C6DF3F00A /* Pods_Nearby_Meal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71626E692156415100F502B7 = {
+			isa = PBXGroup;
+			children = (
+				71626E742156415100F502B7 /* Nearby Meal */,
+				71626E732156415100F502B7 /* Products */,
+				F43BD7A8B730062C6298AD15 /* Pods */,
+				D6D910B3A357A2F624D43F1C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		71626E732156415100F502B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71626E722156415100F502B7 /* Nearby Meal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71626E742156415100F502B7 /* Nearby Meal */ = {
+			isa = PBXGroup;
+			children = (
+				71626E87215646BD00F502B7 /* Domain */,
+				71626E752156415100F502B7 /* AppDelegate.swift */,
+				71626E772156415100F502B7 /* ViewController.swift */,
+				71626E792156415100F502B7 /* Main.storyboard */,
+				71626E7C2156415200F502B7 /* Assets.xcassets */,
+				71626E7E2156415200F502B7 /* LaunchScreen.storyboard */,
+				71626E812156415200F502B7 /* Info.plist */,
+			);
+			path = "Nearby Meal";
+			sourceTree = "<group>";
+		};
+		71626E87215646BD00F502B7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				71626E8C2156487600F502B7 /* Models */,
+				71626E88215646DF00F502B7 /* Services */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		71626E88215646DF00F502B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				71626E89215646EF00F502B7 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		71626E89215646EF00F502B7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				71626E8A2156476500F502B7 /* APIService.swift */,
+				71626E9121564CED00F502B7 /* APIService+MealAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		71626E8C2156487600F502B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71626E8D2156488A00F502B7 /* PlaceCoordinates.swift */,
+				71626E8F2156490600F502B7 /* PlaceType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6D910B3A357A2F624D43F1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E060315776BE339B223DC64 /* Pods_Nearby_Meal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F43BD7A8B730062C6298AD15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46CE476F2AD54FF4213A5A78 /* Pods-Nearby Meal.debug.xcconfig */,
+				68B79B27F26C6DB0D697414E /* Pods-Nearby Meal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71626E712156415100F502B7 /* Nearby Meal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71626E842156415200F502B7 /* Build configuration list for PBXNativeTarget "Nearby Meal" */;
+			buildPhases = (
+				6F815B468C038D39A245E2B2 /* [CP] Check Pods Manifest.lock */,
+				71626E6E2156415100F502B7 /* Sources */,
+				71626E6F2156415100F502B7 /* Frameworks */,
+				71626E702156415100F502B7 /* Resources */,
+				99E49B05F6C2202FFAE37CEB /* [CP] Embed Pods Frameworks */,
+				EFA0EA7322A716A418A4C1D0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nearby Meal";
+			productName = "Nearby Meal";
+			productReference = 71626E722156415100F502B7 /* Nearby Meal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71626E6A2156415100F502B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Timur Piriev";
+				TargetAttributes = {
+					71626E712156415100F502B7 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 71626E6D2156415100F502B7 /* Build configuration list for PBXProject "Nearby Meal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71626E692156415100F502B7;
+			productRefGroup = 71626E732156415100F502B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71626E712156415100F502B7 /* Nearby Meal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71626E702156415100F502B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71626E802156415200F502B7 /* LaunchScreen.storyboard in Resources */,
+				71626E7D2156415200F502B7 /* Assets.xcassets in Resources */,
+				71626E7B2156415100F502B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F815B468C038D39A245E2B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nearby Meal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99E49B05F6C2202FFAE37CEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA0EA7322A716A418A4C1D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71626E6E2156415100F502B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71626E8B2156476500F502B7 /* APIService.swift in Sources */,
+				71626E8E2156488A00F502B7 /* PlaceCoordinates.swift in Sources */,
+				71626E782156415100F502B7 /* ViewController.swift in Sources */,
+				71626E9221564CED00F502B7 /* APIService+MealAPI.swift in Sources */,
+				71626E762156415100F502B7 /* AppDelegate.swift in Sources */,
+				71626E902156490600F502B7 /* PlaceType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		71626E792156415100F502B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71626E7A2156415100F502B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71626E7E2156415200F502B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71626E7F2156415200F502B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71626E822156415200F502B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71626E832156415200F502B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71626E852156415200F502B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46CE476F2AD54FF4213A5A78 /* Pods-Nearby Meal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22TD2AZTE;
+				INFOPLIST_FILE = "Nearby Meal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptb.Nearby-Meal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71626E862156415200F502B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B79B27F26C6DB0D697414E /* Pods-Nearby Meal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22TD2AZTE;
+				INFOPLIST_FILE = "Nearby Meal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptb.Nearby-Meal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71626E6D2156415100F502B7 /* Build configuration list for PBXProject "Nearby Meal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71626E822156415200F502B7 /* Debug */,
+				71626E832156415200F502B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71626E842156415200F502B7 /* Build configuration list for PBXNativeTarget "Nearby Meal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71626E852156415200F502B7 /* Debug */,
+				71626E862156415200F502B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71626E6A2156415100F502B7 /* Project object */;
+}
