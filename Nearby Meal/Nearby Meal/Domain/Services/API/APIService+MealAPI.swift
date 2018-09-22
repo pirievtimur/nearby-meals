@@ -1,12 +1,12 @@
 import Moya
 import ObjectMapper
 
-protocol MealAPI {
-    func mealPlaces(type: MealPlaceType, coordinates: PlaceCoordinates, callback: (([Place], Error?) -> Void)?)
+protocol PlacesAPI {
+    func getPlaces(type: PlaceType, coordinates: PlaceCoordinates, callback: (([Place], Error?) -> Void)?)
 }
 
-extension APIService: MealAPI {
-    func mealPlaces(type: MealPlaceType, coordinates: PlaceCoordinates, callback: (([Place], Error?) -> Void)? = nil) {
+extension APIService: PlacesAPI {
+    func getPlaces(type: PlaceType, coordinates: PlaceCoordinates, callback: (([Place], Error?) -> Void)? = nil) {
         let provider = MoyaProvider<APIProvider>()
         let request = APIProvider.places(type: type.rawValue,
                                          latitude: coordinates.latitude,

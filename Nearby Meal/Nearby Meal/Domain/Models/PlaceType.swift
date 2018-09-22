@@ -1,4 +1,4 @@
-enum MealPlaceType: String {
+enum PlaceType: String {
     case restaurant = "restaurant"
     case bar = "bar"
     case cafe = "cafe"

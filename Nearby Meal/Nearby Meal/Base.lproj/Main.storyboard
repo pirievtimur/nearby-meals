@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Nearby_Meal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka4-Gf-5XI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="587"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="18V-fD-HwM">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ7-ZS-GNa" userLabel="Restaurant">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="60"/>
+                                        <state key="normal" title="Restaurant"/>
+                                        <connections>
+                                            <action selector="getRestaurants:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bmz-6c-3Dz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyT-yA-Gdo" userLabel="Cafe">
+                                        <rect key="frame" x="124.5" y="0.0" width="126" height="60"/>
+                                        <state key="normal" title="Cafe"/>
+                                        <connections>
+                                            <action selector="getCafes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTh-K8-oiN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dft-CI-xQd" userLabel="Bar">
+                                        <rect key="frame" x="248.5" y="0.0" width="126.5" height="60"/>
+                                        <state key="normal" title="Bar"/>
+                                        <connections>
+                                            <action selector="getBars:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dqu-Nh-cug"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nOx-Go-G3D"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ka4-Gf-5XI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1gf-mX-odk"/>
+                            <constraint firstItem="18V-fD-HwM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2vn-J5-Jcd"/>
+                            <constraint firstItem="Ka4-Gf-5XI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ATA-Sw-sBq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="18V-fD-HwM" secondAttribute="trailing" id="OkJ-pA-sbl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ka4-Gf-5XI" secondAttribute="trailing" id="gSE-Xg-zyG"/>
+                            <constraint firstItem="18V-fD-HwM" firstAttribute="top" secondItem="Ka4-Gf-5XI" secondAttribute="bottom" id="hRl-dE-KLM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="18V-fD-HwM" secondAttribute="bottom" id="pSc-sr-sfx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Ka4-Gf-5XI" id="chg-fH-e4L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1740" y="-249"/>
         </scene>
     </scenes>
 </document>

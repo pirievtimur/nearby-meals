@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BC9B24C21C3476C6DF3F00A /* Pods_Nearby_Meal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E060315776BE339B223DC64 /* Pods_Nearby_Meal.framework */; };
 		71626E762156415100F502B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E752156415100F502B7 /* AppDelegate.swift */; };
-		71626E782156415100F502B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E772156415100F502B7 /* ViewController.swift */; };
+		71626E782156415100F502B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E772156415100F502B7 /* MainViewController.swift */; };
 		71626E7B2156415100F502B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71626E792156415100F502B7 /* Main.storyboard */; };
 		71626E7D2156415200F502B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71626E7C2156415200F502B7 /* Assets.xcassets */; };
 		71626E802156415200F502B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71626E7E2156415200F502B7 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		71626E9221564CED00F502B7 /* APIService+MealAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E9121564CED00F502B7 /* APIService+MealAPI.swift */; };
 		71626E942156552300F502B7 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E932156552300F502B7 /* APIProvider.swift */; };
 		71626E962156558E00F502B7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E952156558E00F502B7 /* Place.swift */; };
+		71626E9E2156617800F502B7 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E9D2156617800F502B7 /* MainPresenter.swift */; };
+		71626EA52156709300F502B7 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626EA42156709300F502B7 /* PlaceAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,7 @@
 		68B79B27F26C6DB0D697414E /* Pods-Nearby Meal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearby Meal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal.release.xcconfig"; sourceTree = "<group>"; };
 		71626E722156415100F502B7 /* Nearby Meal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nearby Meal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71626E752156415100F502B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71626E772156415100F502B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71626E772156415100F502B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71626E7A2156415100F502B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71626E7C2156415200F502B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71626E7F2156415200F502B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		71626E9121564CED00F502B7 /* APIService+MealAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+MealAPI.swift"; sourceTree = "<group>"; };
 		71626E932156552300F502B7 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		71626E952156558E00F502B7 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		71626E9D2156617800F502B7 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		71626EA42156709300F502B7 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +77,9 @@
 		71626E742156415100F502B7 /* Nearby Meal */ = {
 			isa = PBXGroup;
 			children = (
+				71626E972156609800F502B7 /* UI */,
 				71626E87215646BD00F502B7 /* Domain */,
 				71626E752156415100F502B7 /* AppDelegate.swift */,
-				71626E772156415100F502B7 /* ViewController.swift */,
 				71626E792156415100F502B7 /* Main.storyboard */,
 				71626E7C2156415200F502B7 /* Assets.xcassets */,
 				71626E7E2156415200F502B7 /* LaunchScreen.storyboard */,
@@ -119,6 +123,24 @@
 				71626E8F2156490600F502B7 /* PlaceType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		71626E972156609800F502B7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				71626E98215660AE00F502B7 /* MainScreen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		71626E98215660AE00F502B7 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				71626E772156415100F502B7 /* MainViewController.swift */,
+				71626E9D2156617800F502B7 /* MainPresenter.swift */,
+				71626EA42156709300F502B7 /* PlaceAnnotation.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		D6D910B3A357A2F624D43F1C /* Frameworks */ = {
@@ -274,9 +296,11 @@
 			files = (
 				71626E8B2156476500F502B7 /* APIService.swift in Sources */,
 				71626E8E2156488A00F502B7 /* PlaceCoordinates.swift in Sources */,
+				71626EA52156709300F502B7 /* PlaceAnnotation.swift in Sources */,
 				71626E942156552300F502B7 /* APIProvider.swift in Sources */,
 				71626E962156558E00F502B7 /* Place.swift in Sources */,
-				71626E782156415100F502B7 /* ViewController.swift in Sources */,
+				71626E9E2156617800F502B7 /* MainPresenter.swift in Sources */,
+				71626E782156415100F502B7 /* MainViewController.swift in Sources */,
 				71626E9221564CED00F502B7 /* APIService+MealAPI.swift in Sources */,
 				71626E762156415100F502B7 /* AppDelegate.swift in Sources */,
 				71626E902156490600F502B7 /* PlaceType.swift in Sources */,
