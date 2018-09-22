@@ -17,6 +17,8 @@
 		71626E8E2156488A00F502B7 /* PlaceCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E8D2156488A00F502B7 /* PlaceCoordinates.swift */; };
 		71626E902156490600F502B7 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E8F2156490600F502B7 /* PlaceType.swift */; };
 		71626E9221564CED00F502B7 /* APIService+MealAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E9121564CED00F502B7 /* APIService+MealAPI.swift */; };
+		71626E942156552300F502B7 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E932156552300F502B7 /* APIProvider.swift */; };
+		71626E962156558E00F502B7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71626E952156558E00F502B7 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		71626E8D2156488A00F502B7 /* PlaceCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCoordinates.swift; sourceTree = "<group>"; };
 		71626E8F2156490600F502B7 /* PlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
 		71626E9121564CED00F502B7 /* APIService+MealAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+MealAPI.swift"; sourceTree = "<group>"; };
+		71626E932156552300F502B7 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		71626E952156558E00F502B7 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				71626E8A2156476500F502B7 /* APIService.swift */,
+				71626E932156552300F502B7 /* APIProvider.swift */,
 				71626E9121564CED00F502B7 /* APIService+MealAPI.swift */,
 			);
 			path = API;
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				71626E8D2156488A00F502B7 /* PlaceCoordinates.swift */,
+				71626E952156558E00F502B7 /* Place.swift */,
 				71626E8F2156490600F502B7 /* PlaceType.swift */,
 			);
 			path = Models;
@@ -229,12 +235,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nearby Meal/Pods-Nearby Meal-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +274,8 @@
 			files = (
 				71626E8B2156476500F502B7 /* APIService.swift in Sources */,
 				71626E8E2156488A00F502B7 /* PlaceCoordinates.swift in Sources */,
+				71626E942156552300F502B7 /* APIProvider.swift in Sources */,
+				71626E962156558E00F502B7 /* Place.swift in Sources */,
 				71626E782156415100F502B7 /* ViewController.swift in Sources */,
 				71626E9221564CED00F502B7 /* APIService+MealAPI.swift in Sources */,
 				71626E762156415100F502B7 /* AppDelegate.swift in Sources */,

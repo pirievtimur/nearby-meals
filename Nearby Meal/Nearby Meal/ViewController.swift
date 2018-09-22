@@ -9,7 +9,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let coordinates = PlaceCoordinates(latitude: -33.8670522, longtitude: 151.1957362)
-        mealsAPI.mealPlaces(type: .restaurant, coordinates: coordinates)
+        mealsAPI.mealPlaces(type: .restaurant,
+                            coordinates: coordinates,
+                            callback: { (places, error) in
+            print(places)
+        })
     }
 }
 

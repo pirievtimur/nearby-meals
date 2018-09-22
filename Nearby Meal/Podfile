@@ -4,4 +4,5 @@ inhibit_all_warnings!
 
 target 'Nearby Meal' do
     pod 'Moya', '~> 11.0'
+    pod 'ObjectMapper', '~> 3.3'
 end
